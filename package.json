@@ -1,0 +1,14 @@
+{
+  "name": "playwright-firefox",
+  "version": "1.0.0",
+  "scripts": {
+    "main": "index.js",
+    "test": "npx playwright test --config=playwright.config.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.13.1",
+    "playwright": "^1.13.1"
+  }
+  
+}
