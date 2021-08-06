@@ -2,8 +2,8 @@
 const { devices } = require("@playwright/test");
 const config = {
   testDir: process.cwd(),
+  testMatch: "*.e2e.js",
   use: {
-    baseURL: `http://localhost:${process.env.PORT}`,
     headless: true,
     ignoreHTTPSErrors: true,
   },
@@ -15,7 +15,6 @@ const config = {
         browserName: "chromium",
         ...devices["Desktop Chrome"],
       },
-      testMatch: "*.e2e.js",
     },
 
     // Test against different devices for visual tests.
@@ -25,9 +24,7 @@ const config = {
       use: {
         browserName: "firefox",
         ...devices["Desktop Firefox"],
-    //    headless: false,
       },
-           testMatch: "*.e2e.js",
     },
 
     {
@@ -35,8 +32,7 @@ const config = {
       use: {
         browserName: "webkit",
         ...devices["Desktop Safari"],
-      },
-           testMatch: "*.e2e.js",
+      }, 
     },
 
     {
@@ -44,8 +40,7 @@ const config = {
       use: {
         browserName: "webkit",
         ...devices["iPhone X"],
-      },
-           testMatch: "*.e2e.js",
+      },  
     },
 
     {
@@ -53,8 +48,7 @@ const config = {
       use: {
         browserName: "chromium",
         ...devices["Desktop Chrome HiDPI"],
-      },
-           testMatch: "*.e2e.js",
+      },  
     },
 
     {
@@ -63,7 +57,6 @@ const config = {
         browserName: "webkit",
         ...devices["iPad Pro 11"],
       },
-      testMatch: "*.e2e.js",
     },
   ],
 
