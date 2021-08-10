@@ -24,6 +24,7 @@ const config = {
       use: {
         browserName: "firefox",
         ...devices["Desktop Firefox"],
+        userAgent: undefined,
       },
     },
 
